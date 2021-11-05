@@ -58,12 +58,16 @@ const valorPorExtensoDezena = (valor, posicao) => {
 
 const valorPorExtensoCentena = (valor, posicao) => {
     let espaco = "";
-    if ((valor[posicao-1] != null) || ((valor[posicao+1] == 0) || (valor[posicao+2] == 0))) { espaco = ' e '; }
+    if (valor[posicao-1] != null) {
+        espaco = ' ';
+        if ((valor[posicao+1] == 0) && (valor[posicao+2] == 0)) {
+            espaco = ' e ';
+        }
+    }
 
     if ((valor[posicao] == 1) && (valor[posicao+1] == 0) && (valor[posicao+2] == 0)){         
         valor = '100';
     } else {
-        if (valor[posicao-1] != null) { espaco = ' '; }        
         valor = valor[posicao];
     }
 
@@ -121,8 +125,8 @@ const valorPorExtenso = (valor) => {
 }
 
 
-let teste = valorPorExtenso('4100');
+let teste = valorPorExtenso('100');
 console.log(teste);
 
 
-//export { valorPorExtensoUnidade, valorPorExtensoDezena, valorPorExtensoCentena, valorPorExtenso }
+export { valorPorExtensoUnidade, valorPorExtensoDezena, valorPorExtensoCentena, valorPorExtenso }
