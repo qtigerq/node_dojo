@@ -1,4 +1,7 @@
-import { valorPorExtensoUnidade, valorPorExtensoDezena, valorPorExtensoCentena, valorPorExtenso } from './chequePorExtenso.js';
+import {valorPorExtensoUnidade,
+        valorPorExtensoDezena,
+        valorPorExtensoCentena,
+        valorPorExtenso } from './chequePorExtenso.js';
 
 test('Dado numero em unidade entre 0-9 escreve por extenso', () => {
     expect(valorPorExtensoUnidade('0', 0)).toBe('zero');    

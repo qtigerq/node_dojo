@@ -124,9 +124,7 @@ const valorPorExtenso = (valor) => {
 
 }
 
-
-let teste = valorPorExtenso('100');
-console.log(teste);
-
-
-export { valorPorExtensoUnidade, valorPorExtensoDezena, valorPorExtensoCentena, valorPorExtenso }
+export {valorPorExtensoUnidade,
+        valorPorExtensoDezena,
+        valorPorExtensoCentena,
+        valorPorExtenso }
